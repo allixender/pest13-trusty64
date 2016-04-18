@@ -1,0 +1,58 @@
+pcf
+* control data
+restart  estimation
+    4    20     4     2    3
+    3     3 single point  1  0  0 
+  5.0   2.0   0.3  0.03    10
+  5.0   5.0 0.001
+  0.1
+   30  0.01     3     3  0.01     3
+    1     1     1
+* group definitions and derivative data
+a    relative 0.01  0.01  switch    2.0 outside_pts
+b    relative 0.01  0.01  always_3  2.0 parabolic
+c    relative 0.01  0.01  switch    2.0 best_fit
+d    absolute 0.05  0.00  switch    2.0 parabolic
+* parameter data
+a    log   factor      1.0000      1.000000E-10   1.000000E+10 a  2.0000 -5.00  1
+b    none  relative    1.0000     -1.000000E+10   1.000000E+10 b  1.0000  0.00  1
+c    none  relative   -6.0000     -1.000000E+10   1.000000E+10 c  1.0000  0.00  1
+d    none  relative    1.0000     -1.000000E+10   10.00000     d  0.5000 -6.00  1
+* observation groups
+group_1  cov.dat
+group_2
+group_3
+* observation data
+o1    -3950.00      1.0  group_1
+o2    -2790.00      1.0  group_1
+o3    -1880.00      1.0  group_1
+o4    -1190.00      1.0  group_2
+o5    -690.000      1.0  group_2
+o6    -350.000      1.0  group_2
+o7    -140.000      1.0  group_2
+o8    -30.0000      1.0  group_2
+o9     10.0000      1.0  group_2
+o10    10.0000      1.0  group_2
+o11   0.000000      1.0  group_2
+o12    10.0000      1.0  group_2
+o13    70.0000      1.0  group_2
+o14    210.000      1.0  group_2
+o15    460.000      1.0  group_2
+o16    850.000      1.0  group_2
+o17    1410.00      1.0  group_2
+o18    2170.00      1.0  group_2
+o19    3160.00      1.0  group_2
+o20    4410.00      1.0  group_2
+* model command line
+./testmod > /dev/null
+* model input/output
+test_c1.tpl  test_c1.in
+test_c2.tpl  test_c2.in
+test_c3.tpl  test_c3.in
+test1.ins  test1.out
+test2.ins  test2.out
+test3.ins  test3.out
+* prior information
+pi1 2 * log(a) = 1 1.0  group_3
+pi2 2 * b + 3 * c + -1 * d = -7 1.0 group_3
+

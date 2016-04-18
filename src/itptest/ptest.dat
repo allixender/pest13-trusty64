@@ -1,0 +1,13 @@
+* parameter data
+a1 = 1.0
+b1 = 2.0
+c1 = 3.0
+d1 = 4.0
+a = a1 + b1
+b = c1 + d1
+c = d1 - b1
+d = d1
+* template and model input files
+test_c1.tpl  test_c1.in
+test_c2.tpl  test_c2.in
+test_c3.tpl  test_c3.in

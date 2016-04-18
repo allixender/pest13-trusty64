@@ -1,0 +1,20 @@
+* parameter data
+par1 = 1.0
+par2 = 2.0
+par3 = 3.0
+par4 = 4.0
+par5 = 5.0
+par6 = 100.0
+par7 = 7.0
+par8 = 90.0
+pi   = 3.1416
+pars1 = par1 + par2
+pars2 = par3**par2
+pars3 = sqrt(par4) + 2 * par7
+pars4 = pars1 + pars2 + pars3
+pars5 = exp(par2) + sin(par8*2*pi/360)
+pars6 = par6 * exp(-par7)
+pars7 = log10(par6) + par4/par2
+* template and model input files
+numbers.tpl numbers.dat
+
