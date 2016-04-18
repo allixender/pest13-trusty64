@@ -54,11 +54,11 @@ cppp :  cppp.F
 	$(F90) $(FFLAGS) -o cppp cppp.F
 
 
-d_test: d_test.f
-	$(F90) -o d_test d_test.f
+d_test: d_test.F
+	$(F90) -o d_test d_test.F
 	./d_test
 
-clean :
+clean : 
 	rm -f *.o
 	rm -f *.mod
 	rm -f *.f

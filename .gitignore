@@ -26,3 +26,17 @@
 *.exe
 *.out
 *.app
+
+
+
+
+compress.for
+lapack1.for
+openun.for
+pestdata.for
+pgetcl.for
+readpest.for
+space.for
+supobspar.for
+
+src/cppp
