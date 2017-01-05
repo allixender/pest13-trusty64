@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt-get update -y \
-      && apt-get install -y --no-install-recommends libgfortran3 build-essential gfortran gfortran-multilib libquadmath0
+sudo apt-get update -y \
+      && sudo apt-get install -y --no-install-recommends libgfortran3 build-essential gfortran gfortran-multilib libquadmath0
 
 cd src
 

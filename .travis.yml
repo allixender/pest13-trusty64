@@ -19,10 +19,33 @@ before_install:
 before_script:
 - echo "install packages"
 install:
-- echo "make dependencies"
+- sudo apt-get update
+- sudo apt-get install libgfortran3 build-essential gfortran gfortran-multilib libquadmath0
 script:
-- if [ $TRAVIS_OS_NAME == linux ]; then ./build-script.sh; fi
-- cd src && make all
+- cd src && make cppp; cd -
+- cd src && make d_test
+- cd src && make -f pest.mak all
+# make clean
+- cd src && make -f ppest.mak all
+# make clean
+- cd src && make -f pestutl1.mak all
+# make clean
+- cd src && make -f pestutl2.mak all
+# make clean
+- cd src && make -f pestutl3.mak all
+# make clean
+- cd src && make -f pestutl4.mak all
+# make clean
+- cd src && make -f pestutl5.mak all
+# make clean
+- cd src && make -f pestutl6.mak all
+# make clean
+- cd src && make -f sensan.mak all
+# make clean
+- cd src && make -f beopest.mak all
+# make clean
+# make install
+
 after_success:
 - echo "make docker"
 branches:
