@@ -1,4 +1,4 @@
-# pest13-trusty64
+## pest13-trusty64 [![Build Status](https://travis-ci.org/allixender/pest13-trusty64.svg)](https://travis-ci.org/allixender/pest13-trusty64)
 
 PEST: Model-Independent Parameter Estimation and Uncertainty Analysis from http://www.pesthomepage.org/ compiling on trusty64 with gfortran95
 
