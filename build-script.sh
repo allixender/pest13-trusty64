@@ -1,12 +1,12 @@
 #!/bin/bash
 
 apt-get update -y \
-      && apt-get install -y --no-install-recommends libgfortran3 build-essential gfortran libquadmath0
+      && apt-get install -y --no-install-recommends libgfortran3 build-essential gfortran gfortran-multilib libquadmath0
 
 cd src
 
 make cppp
- 
+
 make d_test
 
 make -f pest.mak all
@@ -50,4 +50,3 @@ make -f beopest.mak all
 # make clean
 
 # make install
-
